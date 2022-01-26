@@ -22,8 +22,34 @@
             </a>
             <a href="#" class="link link_search header__search"></a>
         </div>
+        <nav class="mobile-menu header__mobile-menu">
+            <div class="mobile-menu__content">
+                <ul class="mobile-menu__list">
+                    <li class="mobile-menu__item"><a class="link mobile-menu__link" href="#">Техническая поддержка</a></li>
+                    <li class="mobile-menu__item"><a class="link mobile-menu__link" href="#">Работа у нас</a></li>
+                    <li class="mobile-menu__item"><a class="link mobile-menu__link" href="#">Контакты</a></li>
+                    <li class="mobile-menu__item"><a class="link mobile-menu__link" href="#">Заказать</a></li>
+                </ul>
+                <div class="social-links mobile-menu__social">
+                    <a href="#" class="social-links__link">
+                        <img src="dist/images/icons/social-links/facebook.svg" alt="">
+                    </a>
+                    <a href="#" class="social-links__link">
+                        <img src="dist/images/icons/social-links/twitter.svg" alt="">
+                    </a>
+                    <a href="#" class="social-links__link">
+                        <img src="dist/images/icons/social-links/behance.svg" alt="">
+                    </a>
+                    <a href="#" class="social-links__link">
+                        <img src="dist/images/icons/social-links/instagram.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <button class="mobile-menu__toggle">
+                <span class="mobile-menu__lines"></span>
+            </button>
+        </nav>
     </header>
-
     <main class="main">
         <section class="navigation main__navigation">
             <div class="container">
@@ -69,7 +95,9 @@
                                     </li>
                                 </ul>
                             </div>
-                            <button class="order-btn navigation__order-btn">Заказать</button>
+                            <div class="navigation__order">
+                                <button class="order-btn navigation__order-btn">Заказать</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -80,22 +108,13 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__top">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <a href="#" class="logo footer__logo">
+                <div class="row gy-5">
+                    <div class="col-12 d-md-none">
+                        <a href="#" class="logo footer__logo footer__logo_mobile">
                             <img src="dist/images/logo.svg" alt="Double" class="logo__img">
                         </a>
-                        <div class="footer__contact">
-                            <a href="#" class="link link_white footer__phone">(776) 070-7000</a>
-                        </div>
-                        <div class="footer__contact">
-                            <a href="#" class="link link_white footer__phone">(707) 857-7666</a>
-                        </div>
-                        <div class="footer__contact">
-                            <a href="#" class="link link_second footer__email">info@double.kz</a>
-                        </div>
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-lg-2 order-md-2">
                         <nav class="footer__menu">
                             <ul class="footer__menu-list">
                                 <li class="footer__menu-title">
@@ -116,7 +135,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 order-md-2">
                         <div class="footer__menu">
                             <ul class="footer__menu-list">
                                 <li class="footer__menu-title">
@@ -132,6 +151,22 @@
                                     <a href="#" class="link link_second footer__menu-link">SEO-продвижение</a>
                                 </li>
                             </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="footer__contacts">
+                            <a href="#" class="logo footer__logo footer__logo_desktop">
+                                <img src="dist/images/logo.svg" alt="Double" class="logo__img">
+                            </a>
+                            <div class="footer__contact">
+                                <a href="#" class="link link_white footer__phone">(776) 070-7000</a>
+                            </div>
+                            <div class="footer__contact">
+                                <a href="#" class="link link_white footer__phone">(707) 857-7666</a>
+                            </div>
+                            <div class="footer__contact">
+                                <a href="#" class="link link_second footer__email">info@double.kz</a>
+                            </div>
                         </div>
                     </div>
                 </div>

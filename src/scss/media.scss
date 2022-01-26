@@ -1,13 +1,151 @@
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1200px) {
+    .main-menu {
+        &__link {
+            opacity: 1;
+        }
 
+        &__img {
+            display: none;
+        }
+    }
+
+    .header {
+    }
+
+    .navigation {
+        &__add-menu {
+            padding-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    
 }
 
 @media screen and (max-width: 991px) {
+    .main-menu {
+        &__item {
+            margin: 7px 0;
+        }
 
+        &__link {
+            font-size: 85px;
+        }
+    }
+
+    .header {
+        padding: 0 20px;
+
+        &__telegram {
+            .link__text {
+                display: none;
+            }
+        }
+    }
+
+    .navigation {
+        padding: 0 70px;
+
+        &__add {
+            margin-top: 95px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+        }
+
+        &__main-menu {
+            margin-right: 0;
+        }
+
+        &__order {
+            margin-top: 0;
+        }
+    }
 }
 
 @media screen and (max-width: 767px) {
+    .mobile-menu {
+        display: block;
+    }
 
+    .main-menu {
+        &__link {
+            font-size: 42px;
+        }
+
+        &__circle {
+            top: -40px;
+            left: 10px;
+
+            &:before {
+                width: 410px;
+                height: 410px;
+                left: -130px;
+            }
+
+            &:after {
+                left: 150px;
+                top: -55px;
+            }
+        }
+    }
+
+    .header {
+        height: 80px;
+        align-items: center;
+        position: fixed;
+        z-index: 2;
+        width: 100%;
+
+        &__logo {
+            padding: 7px 8px 4px;
+            transform: translateY(0);
+
+            .logo__img {
+                max-width: 85px;
+            }
+        }
+
+        &__right {
+            display: none;
+        }
+    }
+
+    .main {
+        &__navigation {
+            margin: 95px 0 50px;
+        }
+    }
+
+    .navigation {
+        padding: 0;
+
+        &__add {
+            display: block;
+        }
+
+        &__order {
+            margin: 40px auto 0;
+        }
+    }
+
+    .footer {
+        &__top {
+            padding-bottom: 35px;
+        }
+
+        &__logo {
+            &_mobile {
+                display: inline-block;
+            }
+
+            &_desktop {
+                display: none;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 640px) {
