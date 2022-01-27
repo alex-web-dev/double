@@ -16,6 +16,7 @@ body {
     color: #000;
     display: inline-block;
     transition: color .3s, background .3s;
+    text-align: center;
 
     &:hover {
         color: #fff;
@@ -39,6 +40,17 @@ body {
     &:hover {
         width: 212px;
         height: 212px;
+    }
+}
+
+.back-btn {
+    &:hover:before {
+        opacity: 0.2;
+    }
+
+    &:before {
+        @include before-icon('../images/icons/back.svg', 57px, 40px);
+        transition: opacity .3s;
     }
 }
 
@@ -506,7 +518,6 @@ body {
 }
 
 .project {
-    
     &__inf {
         padding: 55px 30px 25px;
         height: 100%;
@@ -516,7 +527,7 @@ body {
     }
 
     &__text {
-        margin-top: 30px;
+        margin: 30px 0;
         max-width: 460px;
     }
     
@@ -556,6 +567,13 @@ body {
 
     &_gray {
         background: #f0f0f0;
+    }
+
+    &_next {
+        .project__inf {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }
 
@@ -626,6 +644,33 @@ body {
 .callback {
     position: sticky;
     bottom: 0;
+}
+
+.single-project {
+    padding: 110px 0 140px;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__main {
+        margin-top: 220px;
+    }
+
+    &__img {
+        border: 21px solid $color-primary;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.next-case {
+    background: #fff;
+    padding: 60px 0 70px;
+
+    &__title {
+        margin-bottom: 70px;
+    }
 }
 
 @keyframes rotate {
