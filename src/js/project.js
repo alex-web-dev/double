@@ -1,4 +1,4 @@
-const $projectsContent = document.querySelectorAll('.project__content');
+const $projectsContent = document.querySelectorAll('.project_scroll_hide .project__content');
 $projectsContent.forEach($item => scrollOpacityHandler($item, 600));
 
 function scrollOpacityHandler($elem, range) {
