@@ -9,12 +9,19 @@
         }
     }
 
-    .header {
-    }
-
     .navigation {
         &__add-menu {
             padding-left: 0;
+        }
+    }
+
+    .process-item {
+        &__header {
+            flex-wrap: wrap;
+        }
+
+        &__title {
+            width: 100%;
         }
     }
 }
@@ -100,15 +107,30 @@
             max-height: 226px;
         }
     }
+
+    .app {
+        flex-wrap: wrap;
+        padding: 50px 0 90px;
+
+        &__text {
+            width: 100%;
+            max-width: 100%;
+            margin-top: 25px;
+        }
+    }
 }
 
 @media screen and (max-width: 767px) {
     .title1 {
-        font-size: 36px;
+        font-size: 42px;
     }
 
     .title2 {
         font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 20px;
     }
 
     .mobile-menu {
@@ -245,6 +267,70 @@
 
         &__title {
             margin-bottom: 10px;
+        }
+    }
+
+    .apps {
+        &__list {
+            margin-top: 80px;
+        }
+    }
+
+    .app {
+        padding: 40px 0 60px;
+
+        &__title {
+            font-size: 30px;
+        }
+
+        &__num {
+            width: 40px;
+            flex: 0 0 auto;
+            line-height: 1;
+        }
+    }
+
+    .process {
+        padding: 60px 0 65px;
+
+        &__subtitle {
+            margin-top: 10px;
+        }
+
+        &__list {
+            margin-top: 60px;
+        }
+    }
+
+    .process-item {
+        &__header {
+            flex-wrap: nowrap;
+        }
+    }
+
+    .develop {
+        &__list {
+            margin-top: 70px;
+        }
+    }
+
+    .develop-list {
+        &__item {
+            &:not(:first-child) {
+                margin-top: 50px;
+            }
+        }
+    }
+
+    .develop-item {
+        flex-direction: column;
+
+        &__inf {
+            margin-top: 30px;
+        }
+
+        &__title {
+            font-size: 32px;
         }
     }
 }
