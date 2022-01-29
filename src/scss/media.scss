@@ -1,3 +1,19 @@
+@media screen and (max-width: 1400px) {
+    .consult {
+        &__content {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 30px 0 35px;
+        }
+
+        &__form {
+            margin-left: 0;
+            margin-top: 23px;
+            width: 100%;
+        }
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .main-menu {
         &__link {
@@ -225,6 +241,10 @@
     }
 
     .project {
+        &__title {
+            font-size: 32px;
+        }
+
         &_next {
             .project__btn {
                 width: 100%;
@@ -333,10 +353,41 @@
             font-size: 32px;
         }
     }
+
+    .consult {
+        position: relative;
+    }
+
+    .consult-form {
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__field {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+
+        &__submit {
+            width: 100%;
+        }
+    }
+
+    .logotypes {
+        padding: 40px 0;
+
+        &__title {
+            margin-bottom: 50px;
+        }
+    }
 }
 
-@media screen and (max-width: 640px) {
-
+@media screen and (max-width: 330px) {
+    .main-menu {
+        &__link {
+            font-size: 40px;
+        }
+    }
 }
 
 @media screen and (max-width: 480px) {
