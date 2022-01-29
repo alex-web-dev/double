@@ -241,6 +241,10 @@
     }
 
     .project {
+        &__title {
+            font-size: 32px;
+        }
+
         &_next {
             .project__btn {
                 width: 100%;
@@ -368,10 +372,22 @@
             width: 100%;
         }
     }
+
+    .logotypes {
+        padding: 40px 0;
+
+        &__title {
+            margin-bottom: 50px;
+        }
+    }
 }
 
-@media screen and (max-width: 640px) {
-
+@media screen and (max-width: 330px) {
+    .main-menu {
+        &__link {
+            font-size: 40px;
+        }
+    }
 }
 
 @media screen and (max-width: 480px) {
