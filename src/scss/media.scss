@@ -40,6 +40,12 @@
             width: 100%;
         }
     }
+
+    .elem {
+        &__header {
+            width: 465px;
+        }
+    }
 }
 
 @media screen and (max-width: 1170px) {
@@ -124,14 +130,47 @@
         }
     }
 
-    .app {
+    .elem {
         flex-wrap: wrap;
         padding: 50px 0 90px;
+
+        &__header {
+            width: 100%;
+        }
+
+        &__title {
+            width: auto;
+            flex: 1 1 auto;
+        }
 
         &__text {
             width: 100%;
             max-width: 100%;
             margin-top: 25px;
+        }
+
+        &_task {
+            flex-wrap: nowrap;
+
+            .elem__text {
+                margin-top: 0;
+            }
+
+            .elem__num {
+                margin-top: 4px;
+            }
+        }
+    }
+
+    .bot-features {
+        padding: 45px 0 55px;
+
+        &__subtitle {
+            margin-bottom: 100px;
+        }
+
+        &__animate {
+            margin: 0 auto 80px;
         }
     }
 }
@@ -296,8 +335,16 @@
         }
     }
 
-    .app {
-        padding: 40px 0 60px;
+    .elems-list {
+        &__item {
+            &:not(:first-child) {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    .elem {
+        padding: 40px 0 20px;
 
         &__title {
             font-size: 30px;
@@ -307,6 +354,12 @@
             width: 40px;
             flex: 0 0 auto;
             line-height: 1;
+        }
+
+        &_task {
+            .elem__num {
+                width: 50px;
+            }
         }
     }
 
@@ -325,6 +378,12 @@
     .process-item {
         &__header {
             flex-wrap: nowrap;
+        }
+
+        &_bot {
+            .process-item__link-box {
+                margin-top: 40px;
+            }
         }
     }
 
@@ -378,6 +437,126 @@
 
         &__title {
             margin-bottom: 50px;
+        }
+    }
+
+    .section-header {
+        &__content {
+            &:after {
+                margin-top: 60px;
+            }
+        }
+    }
+
+    .bots {
+        &__section-header {
+            .section-header__content:after {
+                margin-top: 70px;
+            }
+        }
+    }
+
+    .chat-bots {
+        padding: 45px 0;
+
+        &__subtitle {
+            margin-bottom: 60px;
+        }
+    }
+
+    .chat-bot {
+        &__img {
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+        }
+    }
+
+    .footer {
+        padding: 40px 0 50px;
+    }
+
+    .bot-animate {
+        width: 262px;
+
+        &__eyebrows {
+            height: 48px;
+        }
+
+        &__eyebrow-part {
+            width: 16px;
+            height: 16px;
+
+            &_left_2 {
+                left: 16px;
+                top: 16px;
+            }
+    
+            &_left_3 {
+                left: 32px;
+                top: 32px;
+            }
+    
+            &_right_2 {
+                right: 16px;
+                top: 16px;
+            }
+    
+            &_right_3 {
+                right: 32px;
+                top: 32px;
+            }
+        }
+
+        &__eyes {
+            margin-top: 40px;
+            height: 32px;
+        }
+
+        &__eye {
+            width: 32px;
+            height: 32px;
+        }
+
+        &__mouth {
+            margin-top: 78px;
+            height: 48px;
+        }
+
+        &__mouth-corner {
+            width: 16px;
+            height: 32px;
+        }
+
+        &__middle-lip {
+            height: 16px;
+            width: 32px;
+        
+            &_left {
+                left: 16px;
+                top: 16px;
+            }
+    
+            &_right {
+                right: 16px;
+                top: 16px;
+            }
+        }
+
+        &__lower-lips {
+            height: 16px;
+            width: 190px;
+            margin-left: -95px;
+        }
+    }
+
+    .features-list {
+        &__item {
+            font-size: 20px;
+
+            &:not(:first-child) {
+                margin-top: 35px;
+            }
         }
     }
 }

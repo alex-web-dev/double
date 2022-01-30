@@ -3,6 +3,7 @@
 @import 'libs';
 @import 'base';
 @import 'fonts';
+@import 'anim';
 
 body {
     background: $color-bg;
@@ -815,64 +816,92 @@ body {
     }
 }
 
-.apps-list {
+.elems-list {
     &__item {
         border-top: 1px solid #9AA4B3;
+
+        &:not(:first-child) {
+            margin-top: 100px;
+        }
     }
 }
 
-.app {
-    padding: 65px 0 165px;
+.elem {
+    padding: 65px 0;
     display: flex;
     justify-content: space-between;
 
     &__header {
         display: flex;
+        flex: 1 1 auto;
+        width: 600px;
     }
 
     &__title {
         font-weight: 700;
+        width: 370px;
+        max-width: 100%;
+        flex: 0 0 auto;
     }
 
     &__text {
-        flex: 0 0 auto;
-        width: 560px;
-        max-width: 50%;
+        flex: 1 1 auto;
     }
 
     &__num {
         width: 100px;
+        flex: 0 0 auto;
         margin-top: 10px;
         font-size: 18px;
         line-height: 1.3;
     }
+
+    &_task {
+        .elem__num {
+            width: 65px;
+        }
+    }
 }
 
 .process {
-    padding: 90px 0 95px;
+    padding: 90px 0 85px;
 
     &__subtitle {
         margin-top: 25px;
     }
 
     &__list {
-        margin-top: 110px;
-
-        &:before {
-            @include before-icon('../images/icons/arrow.svg', 25px, 14px);
-            transform: rotate(90deg);
-            margin-bottom: 38px;
-        }
+        margin-top: 100px;
     }
 
     &_white {
         background: #fff;
+    }
+
+    &_black {
+        background: #000;
+
+        .process__title {
+            color: #fff;
+        }
+
+        .process__subtitle {
+            color: #fff;
+        }
     }
 }
 
 .process-list {
     &__item {
         height: 100%;
+    }
+
+    &_arrow {
+        &:before {
+            @include before-icon('../images/icons/arrow.svg', 25px, 14px);
+            transform: rotate(90deg);
+            margin-bottom: 38px;
+        }
     }
 }
 
@@ -898,6 +927,16 @@ body {
         margin-top: 20px;
     }
 
+    &__ul {
+        margin-top: 15px;
+    }
+
+    &__li {
+        &:before {
+            content: '– ';
+        }
+    }
+
     &__footer {
         margin-top: auto;
     }
@@ -910,6 +949,38 @@ body {
 
     &__link {
         font-weight: 500;
+    }
+
+    &_black {
+        .process-item__title {
+            color: #fff;
+        }
+
+        .process-item__text {
+            color: #c2c2c2;
+        }
+
+        .process-item__link {
+            color: #fff;
+
+            &:hover {
+                color: $color-primary;
+            }
+
+            &:after {
+                background-image: url('../images/icons/arrow-white.svg');
+            }
+        }
+
+        .process-item__ul {
+            color: #c2c2c2;
+        }
+    }
+
+    &_bot {
+        .process-item__link-box {
+            margin-top: 70px;
+        }
     }
 }
 
@@ -958,11 +1029,17 @@ body {
 .design {
     padding-top: 15px;
 
-    &__header {
+    &__section-header {
         margin-bottom: 160px;
     }
 
-    &__header-content {
+    &__sites-title {
+        margin-bottom: 60px;
+    }
+}
+
+.section-header {
+    &__content {
         &:after {
             @include before-icon('../images/icons/arrow.svg', 26px, 14px);
             display: block;
@@ -973,10 +1050,6 @@ body {
 
     &__subtitle {
         margin-top: 25px;
-    }
-
-    &__sites-title {
-        margin-bottom: 60px;
     }
 }
 
@@ -1002,15 +1075,245 @@ body {
     }
 }
 
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-        animation-timing-function: ease-in-out;
-    }
-    100% {
-        transform: rotate(360deg);
+.bots {
+    padding-top: 15px;
+
+    &__section-header {
+        margin-bottom: 30px;
+
+        .section-header__content {
+            max-width: 900px;
+
+            &:after {
+                margin-top: 120px;
+            }
+        }
     }
 }
 
+.chat-bots {
+    padding: 90px 0 65px;
+    background: #fff;
+
+    &__title {
+        margin-bottom: 40px;
+        max-width: 700px;
+    }
+
+    &__subtitle {
+        margin-bottom: 100px;
+        max-width: 980px;
+    }
+}
+
+.chat-bot {
+    display: flex;
+    align-items: center;
+
+    &__title {
+        line-height: 1;
+    }
+
+    &__img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-right: 28px;
+    }
+}
+
+.bot-features {
+    padding: 80px 0 130px;
+    background: #000;
+
+    &__title1 {
+        color: #fff;
+        margin-bottom: 55px;
+    }
+
+    &__subtitle {
+        color: #fff;
+        margin-bottom: 225px;
+    }
+
+    &__animate {
+        margin: 0 0 35px 40px;
+    }
+}
+
+.bot-animate {
+    position: relative;
+    width: 420px;
+
+    &__eyebrows {
+        position: relative;
+        height: 75px;
+    }
+
+    &__eyebrow {
+        position: absolute;
+
+        &_left {
+            left: 0;
+        }
+
+        &_right {
+            right: 0;
+        }
+    }
+
+    &__eyebrow-part {
+        width: 25px;
+        height: 25px;
+        background: $bot-animate-color;
+        position: absolute;
+
+        &_left_1 {
+            left: 0;
+            top: 0;
+        }
+
+        &_left_2 {
+            left: 25px;
+            top: 25px;
+        }
+
+        &_left_3 {
+            left: 50px;
+            top: 50px;
+        }
+
+        &_right_1 {
+            right: 0;
+            top: 0;
+        }
+
+        &_right_2 {
+            right: 25px;
+            top: 25px;
+        }
+
+        &_right_3 {
+            right: 50px;
+            top: 50px;
+        }
+    }
+
+    &__eyes {
+        position: relative;
+        margin-top: 60px;
+        height: 50px;
+    }
+
+    &__eye {
+        width: 50px;
+        height: 50px;
+        background: $bot-animate-color;
+        position: absolute;
+
+        &_left {
+            left: 23px;
+        }
+
+        &_right {
+            right: 23px;
+        }
+    }
+
+    &__mouth {
+        margin-top: 120px;
+        width: calc(100% - 12.5px);
+        height: 75px;
+        position: relative;
+    }
+
+    &__mouth-corner {
+        width: 25px;
+        height: 50px;
+        background: $bot-animate-color;
+        position: absolute;
+        top: 0;
+
+        &_left {
+            left: 0;
+        }
+
+        &_right {
+            right: 0;
+        }
+    }
+
+    &__middle-lip {
+        position: absolute;
+        width: 50px;
+        height: 25px;
+        background: $bot-animate-color;
+
+        &_left {
+            left: 25px;
+            top: 25px;
+        }
+
+        &_right {
+            right: 25px;
+            top: 25px;
+        }
+    }
+
+    &__lower-lips {
+        width: 310px;
+        height: 25px;
+        background: $bot-animate-color;
+        position: absolute;
+        left: 50%;
+        margin-left: -155px;
+        bottom: 0;
+    }
+
+    &_active {
+        .bot-animate__eyebrow-part,
+        .bot-animate__eye,
+        .bot-animate__mouth-corner,
+        .bot-animate__middle-lip,
+        .bot-animate__lower-lips {
+            animation: rotate-up-down 2.6s linear forwards;
+        }
+    }
+}
+
+.features-list {
+    &__item {
+        color: #c6ced9;
+        font-size: 24px;
+        line-height: 1.55;
+        font-weight: 700;
+        display: flex;
+        align-items: flex-start;
+
+        &:not(:first-child) {
+            margin-top: 50px;
+        }
+
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            flex: 0 0 auto;
+            margin-top: 9px;
+            border-radius: 50%;
+            margin-right: 32px;
+            background: $color-primary;
+        }
+    }
+}
+
+.tasks {
+    padding-top: 50px;
+
+    &__title {
+        margin-bottom: 50px;
+    }
+}
 
 @import 'media';
