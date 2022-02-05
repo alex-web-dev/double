@@ -369,6 +369,12 @@
         }
     }
 
+    .elems {
+        &__title {
+            font-size: 35px;
+        }
+    }
+
     .elems-list {
         &__item {
             &:not(:first-child) {
@@ -393,6 +399,12 @@
         &_task {
             .elem__num {
                 width: 50px;
+            }
+        }
+
+        &_support {
+            .elem__num {
+                width: 40px;
             }
         }
     }
@@ -632,6 +644,24 @@
 
         &__email-text {
             font-size: 16px;
+        }
+    }
+
+    .faq {
+        padding: 55px 0 60px;
+
+        &__title {
+            margin-bottom: 50px;
+        }
+    }
+
+    .faq-item {
+        &__title {
+            font-size: 30px;
+        }
+
+        &__main {
+            margin-top: 20px;
         }
     }
 }
