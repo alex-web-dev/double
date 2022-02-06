@@ -79,6 +79,10 @@ body {
         color: #fff;
     }
 
+    &_primary {
+        color: $color-primary;
+    }
+
     &_second {
         color: $color-secondary;
     }
@@ -817,8 +821,26 @@ body {
         margin-bottom: 50px;
     }
 
+    &__main {
+        margin-top: 120px;
+    }
+
+    &__list {
+        margin-top: 30px;
+    }
+
     &_white {
         background: #fff;
+    }
+
+    &_black {
+        background: #000;
+
+        .elems__title {
+            color: #fff;
+        }
+
+
     }
 }
 
@@ -828,6 +850,14 @@ body {
 
         &:not(:first-child) {
             margin-top: 100px;
+        }
+    }
+
+    &_service {
+        .elems-list__item {
+            &:not(:first-child) {
+                margin-top: 0;
+            }
         }
     }
 }
@@ -884,6 +914,20 @@ body {
             width: 65px;
         }
     }
+
+    &_black {
+        .elem__num,
+        .elem__title,
+        .elem__text {
+            color: #fff;
+        }
+    }
+
+    &_service {
+        .elem__num {
+            width: 60px;
+        }
+    }
 }
 
 .process {
@@ -917,7 +961,7 @@ body {
         padding: 0 0 70px;
 
         .process__subtitle {
-            margin-top: 40px;
+            margin-top: 45px;
         }
     }
 }
@@ -1101,6 +1145,14 @@ body {
 
     &__subtitle {
         margin-top: 25px;
+    }
+
+    &_service {
+        padding-bottom: 70px;
+
+        .section-header__subtitle {
+            margin-top: 55px;
+        }
     }
 }
 
@@ -1327,7 +1379,7 @@ body {
         .bot-animate__mouth-corner,
         .bot-animate__middle-lip,
         .bot-animate__lower-lips {
-            animation: rotate-up-down 2.6s linear forwards;
+            animation: rotate-up-down 2.6s .5s linear forwards;
         }
     }
 }
@@ -1450,6 +1502,7 @@ body {
 
 .faq {
     padding: 75px 0 85px;
+    overflow: hidden;
 
     &__title {
         margin-bottom: 70px;
@@ -1531,9 +1584,12 @@ body {
     }
 
     &__ul {
-        margin-top: 26px;
         list-style: disc;
         padding-left: 20px;
+
+        &:not(:first-child) {
+            margin: 26px 0 10px;
+        }
     }
 
     &_black {
@@ -1543,6 +1599,12 @@ body {
 
         .faq-item__text {
             color: #c2c2c2;
+        }
+    }
+
+    &_service {
+        .faq-item__text {
+            color: $color-bg;
         }
     }
 

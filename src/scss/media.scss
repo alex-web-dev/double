@@ -143,6 +143,12 @@
         }
     }
 
+    .elems {
+        &__main {
+            margin-top: 90px;
+        }
+    }
+
     .elem {
         flex-wrap: wrap;
         padding: 50px 0 90px;
@@ -180,7 +186,6 @@
                 width: auto;
             }
         }
-
     }
 
     .bot-features {
@@ -492,6 +497,14 @@
                 margin-top: 60px;
             }
         }
+
+        &_service {
+            padding-bottom: 60px;
+
+            .section-header__subtitle {
+                margin-top: 25px;
+            }
+        }
     }
 
     .bots {
@@ -657,11 +670,32 @@
 
     .faq-item {
         &__title {
-            font-size: 30px;
+            font-size: 28px;
+            margin-right: 8px;
         }
 
         &__main {
             margin-top: 20px;
+        }
+
+        &__btn {
+            width: 34px;
+            height: 34px;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .elems {
+        &__title {
+            margin-bottom: 35px;
+        }
+
+        &__main {
+            margin-top: 50px;
         }
     }
 }
@@ -670,6 +704,13 @@
     .main-menu {
         &__link {
             font-size: 40px;
+        }
+    }
+
+    .faq-item {
+        &__title {
+            font-size: 24px;
+            margin-right: 4px;
         }
     }
 }
