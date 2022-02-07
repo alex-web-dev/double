@@ -143,6 +143,12 @@
         }
     }
 
+    .elems {
+        &__main {
+            margin-top: 90px;
+        }
+    }
+
     .elem {
         flex-wrap: wrap;
         padding: 50px 0 90px;
@@ -180,7 +186,6 @@
                 width: auto;
             }
         }
-
     }
 
     .bot-features {
@@ -212,6 +217,10 @@
 @media screen and (max-width: 767px) {
     .title1 {
         font-size: 42px;
+
+        &_seo {
+            font-size: 38px;
+        }
     }
 
     .title2 {
@@ -419,6 +428,12 @@
         &__list {
             margin-top: 60px;
         }
+
+        &_seo {
+            .process__title {
+                font-size: 36px;
+            }
+        }
     }
 
     .process-item {
@@ -490,6 +505,14 @@
         &__content {
             &:after {
                 margin-top: 60px;
+            }
+        }
+
+        &_service {
+            padding-bottom: 60px;
+
+            .section-header__subtitle {
+                margin-top: 25px;
             }
         }
     }
@@ -657,19 +680,75 @@
 
     .faq-item {
         &__title {
-            font-size: 30px;
+            font-size: 28px;
+            margin-right: 8px;
         }
 
         &__main {
             margin-top: 20px;
         }
+
+        &__btn {
+            width: 34px;
+            height: 34px;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .elems {
+        &__title {
+            margin-bottom: 35px;
+        }
+
+        &__main {
+            margin-top: 50px;
+        }
+    }
+
+    .results {
+        padding-bottom: 60px;
+
+        &__title {
+            margin-bottom: 50px;
+        }
+
+        &_seo {
+            .results__title {
+                font-size: 39px;
+            }
+        }
+    }
+
+    .result-item {
+        &__img {
+            width: 40px;
+            height: 40px;
+            margin-right: 20px;
+        }
     }
 }
 
 @media screen and (max-width: 330px) {
+    .title1 {
+        &_seo {
+            font-size: 36px;
+        }
+    }
+    
     .main-menu {
         &__link {
             font-size: 40px;
+        }
+    }
+
+    .faq-item {
+        &__title {
+            font-size: 24px;
+            margin-right: 4px;
         }
     }
 }
