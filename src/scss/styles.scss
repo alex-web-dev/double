@@ -475,7 +475,7 @@ body {
     flex-direction: column;
 
     &__navigation {
-        margin: 80px 0 240px;
+        margin: 90px 0 240px;
     }
 
     &__consult {
@@ -1026,6 +1026,13 @@ body {
         font-weight: 500;
     }
 
+    &__price {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-top: 23px;
+    }
+
     &_black {
         .process-item__title {
             color: #fff;
@@ -1147,11 +1154,30 @@ body {
         margin-top: 25px;
     }
 
+    &__btn {
+        padding: 14px 30px;
+        margin-top: 55px;
+    }
+
     &_service {
         padding-bottom: 70px;
 
         .section-header__subtitle {
             margin-top: 55px;
+        }
+    }
+
+    &_seo {
+        padding-bottom: 100px;
+
+        .section-header__subtitle {
+            margin-top: 45px;
+        }
+
+        .section-header__content {
+            &:after {
+                display: none;
+            }
         }
     }
 }
@@ -1616,6 +1642,40 @@ body {
         .faq-item__main {
             margin-bottom: 40px;
         }
+    }
+}
+
+.results {
+    padding: 45px 0 105px;
+    overflow: hidden;
+
+    &__title {
+        margin-bottom: 100px;
+    }
+}
+
+.result-item {
+    &__header {
+        display: flex;
+        align-items: center;
+    }
+    
+    &__img {
+        margin-right: 40px;
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+    }
+
+    &__title {
+        font-size: 32px;
+        line-height: 1;
+        font-weight: 700;
+        margin-top: 5px;
+    }
+
+    &__text {
+        margin-top: 10px;
     }
 }
 
