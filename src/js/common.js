@@ -4,3 +4,4 @@ import './bot';
 import './run-line';
 import './faq';
 import './search';
+import './callback-popup';
