@@ -17,22 +17,19 @@
             <img src="dist/images/logo.svg" alt="Double" class="logo__img">
         </a>
         <div class="header__right">
-            <a href="#" class="link link_telegram header__telegram">
+            <a href="#" class="link link_telegram header__telegram open-callback">
                 <span class="link__text">Давайте сотрудничать</span>
             </a>
-            <a href="#" class="link link_search header__search"></a>
+            <a href="#" class="link link_search toggle-search"></a>
         </div>
         <nav class="mobile-menu header__mobile-menu">
             <div class="mobile-menu__content">
                 <ul class="mobile-menu__list">
-                    <li class="mobile-menu__item"><a class="link mobile-menu__link" href="./support.html">Техническая
-                            поддержка</a>
+                    <li class="mobile-menu__item"><a class="link mobile-menu__link" href="./support.html">Техническая поддержка</a>
                     </li>
-                    <li class="mobile-menu__item"><a class="link mobile-menu__link" href="./vacancies.html">Работа у
-                            нас</a></li>
-                    <li class="mobile-menu__item"><a class="link mobile-menu__link" href="./contacts.html">Контакты</a>
-                    </li>
-                    <li class="mobile-menu__item"><a class="link mobile-menu__link" href="#">Заказать</a></li>
+                    <li class="mobile-menu__item"><a class="link mobile-menu__link" href="./vacancies.html">Работа у нас</a></li>
+                    <li class="mobile-menu__item"><a class="link mobile-menu__link" href="./contacts.html">Контакты</a></li>
+                    <li class="mobile-menu__item"><a class="link mobile-menu__link open-callback" href="#">Заказать</a></li>
                 </ul>
                 <div class="social-links mobile-menu__social">
                     <a href="#" class="social-links__link">
@@ -53,7 +50,20 @@
                 <span class="mobile-menu__lines"></span>
             </button>
         </nav>
+        <div class="search">
+            <div class="search__content">
+                <div class="search__main">
+                    <div class="search-field search__field">
+                        <input type="text" class="search-field__input" placeholder="Например Landing page">
+                        <button class="search-field__btn"></button>
+                    </div>
+                    <button class="search__close"></button>
+                </div>
+                <button class="search__submit">Поиск</button>
+            </div>
+        </div>
     </header>
+    
     <main class="main">
         <div class="section-header section-header_seo">
             <div class="container">
@@ -66,7 +76,7 @@
                             <p class="subtitle section-header__subtitle">Выведите ресурс на первые позиции поисковых
                                 систем. Правильное продвижение гарантирует повышение посещаемости ресурса, рост продаж
                                 ваших товаров и услуг.</p>
-                            <button class="btn section-header__btn">Начать продвижение</button>
+                            <button class="btn section-header__btn open-callback">Начать продвижение</button>
                         </div>
                     </div>
                 </div>
@@ -136,7 +146,7 @@
                                     Оцениваем спрос. Определяем возможный трафик из поисковых систем</p>
                                 <div class="process-item__footer">
                                     <div class="link-box process-item__link-box">
-                                        <a href="#" class="link link_more process-item__link">
+                                        <a href="#" class="link link_more process-item__link open-callback">
                                             Получить консультацию</a>
                                     </div>
                                 </div>
@@ -151,7 +161,7 @@
                                     стратегии для продвижения в системах Яндекс и Google</p>
                                 <div class="process-item__footer">
                                     <div class="link-box process-item__link-box">
-                                        <a href="#" class="link link_more process-item__link">
+                                        <a href="#" class="link link_more process-item__link open-callback">
                                             Получить консультацию</a>
                                     </div>
                                 </div>
@@ -175,7 +185,7 @@
                                     продвижения на 3, 6, 12 месяцев</p>
                                 <div class="process-item__footer">
                                     <div class="link-box process-item__link-box">
-                                        <a href="#" class="link link_more process-item__link">
+                                        <a href="#" class="link link_more process-item__link open-callback">
                                             Получить консультацию</a>
                                     </div>
                                 </div>
@@ -191,7 +201,7 @@
                                     ядру</p>
                                 <div class="process-item__footer">
                                     <div class="link-box process-item__link-box">
-                                        <a href="#" class="link link_more process-item__link">
+                                        <a href="#" class="link link_more process-item__link open-callback">
                                             Получить консультацию</a>
                                     </div>
                                 </div>
@@ -215,7 +225,7 @@
                                     слабые стороны сайта, на которые стоит уделять особое внимание</p>
                                 <div class="process-item__footer">
                                     <div class="link-box process-item__link-box">
-                                        <a href="#" class="link link_more process-item__link">
+                                        <a href="#" class="link link_more process-item__link open-callback">
                                             Получить консультацию</a>
                                     </div>
                                 </div>
@@ -230,7 +240,7 @@
                                     роста позиций сайт и комментариями от СЕО специалиста</p>
                                 <div class="process-item__footer">
                                     <div class="link-box process-item__link-box">
-                                        <a href="#" class="link link_more process-item__link">
+                                        <a href="#" class="link link_more process-item__link open-callback">
                                             Получить консультацию</a>
                                     </div>
                                 </div>
@@ -285,7 +295,7 @@
         </div>
         <div class="process process_white">
             <div class="container">
-                <div class="title1 process__title">Тарифы</div>
+                <h2 class="title1 process__title">Тарифы</h2>
                 <div class="process-list process__list">
                     <div class="row gy-5">
                         <div class="col-md-6 col-lg-4">
@@ -301,7 +311,7 @@
                                 <div class="process-item__footer">
                                     <div class="process-item__price">от 150 000 тг./мес.</div>
                                     <div class="link-box process-item__link-box">
-                                        <a href="#" class="link link_more process-item__link">Заказать</a>
+                                        <a href="#" class="link link_more process-item__link open-callback">Заказать</a>
                                     </div>
                                 </div>
                             </div>
@@ -318,7 +328,7 @@
                                 <div class="process-item__footer">
                                     <div class="process-item__price">от 290 000 тг./мес.</div>
                                     <div class="link-box process-item__link-box">
-                                        <a href="#" class="link link_more process-item__link">Заказать</a>
+                                        <a href="#" class="link link_more process-item__link open-callback">Заказать</a>
                                     </div>
                                 </div>
                             </div>
@@ -336,7 +346,7 @@
                                 <div class="process-item__footer">
                                     <div class="process-item__price">от 400 000 тг./мес.</div>
                                     <div class="link-box process-item__link-box">
-                                        <a href="#" class="link link_more process-item__link">Заказать</a>
+                                        <a href="#" class="link link_more process-item__link open-callback">Заказать</a>
                                     </div>
                                 </div>
                             </div>
@@ -401,10 +411,10 @@
                                         поддержка</a>
                                 </li>
                                 <li class="footer__menu-item">
-                                    <a href="#" class="link link_second footer__menu-link">Стандарты обслуживания</a>
+                                    <a href="./support.html#standarts" class="link link_second footer__menu-link">Стандарты обслуживания</a>
                                 </li>
                                 <li class="footer__menu-item">
-                                    <a href="#" class="link link_second footer__menu-link">Бесплатная консультация</a>
+                                    <a href="#" class="link link_second footer__menu-link open-callback">Бесплатная консультация</a>
                                 </li>
                                 <li class="footer__menu-item">
                                     <a href="./seo.html" class="link link_second footer__menu-link">SEO-продвижение</a>
@@ -418,13 +428,13 @@
                                 <img src="dist/images/logo.svg" alt="Double" class="logo__img">
                             </a>
                             <div class="footer__contact">
-                                <a href="#" class="link link_white footer__phone">(776) 070-7000</a>
+                                <a href="tel:87760707000" class="link link_white footer__phone">(776) 070-7000</a>
                             </div>
                             <div class="footer__contact">
-                                <a href="#" class="link link_white footer__phone">(707) 857-7666</a>
+                                <a href="tel:87078577666" class="link link_white footer__phone">(707) 857-7666</a>
                             </div>
                             <div class="footer__contact">
-                                <a href="#" class="link link_second footer__email">info@double.kz</a>
+                                <a href="mailto:info@double.kz" class="link link_second footer__email">info@double.kz</a>
                             </div>
                         </div>
                     </div>
@@ -435,6 +445,21 @@
             </div>
         </div>
     </footer>
+    
+    <div class="callback-popup">
+        <div class="callback-popup__content">
+            <div class="callback-popup__title">Чем вам помочь?</div>
+            <div class="callback-popup__text">Пожалуйста, заполните эту форму, мы свяжемся с вами в ближайшее время</div>
+            <form class="callback-form callback-popup__form">
+                <input type="text" class="callback-form__input" placeholder="+7 (999) 999-99-99">
+                <input type="text" class="callback-form__input" placeholder="Имя">
+                <input type="text" class="callback-form__input" placeholder="Кратко опишите вашу задачу">
+                <button class="callback-form__submit">Отправить</button>
+            </form>
+        </div>
+        <button class="close-btn callback-popup__close"></button>
+    </div>
+    
     <script src="dist/js/common.js"></script>
 </body>
 
