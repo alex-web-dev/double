@@ -482,7 +482,8 @@ body {
         margin-top: auto;
     }
 
-    &__contacts {
+    &__contacts,
+    &__not-found {
         margin-top: -60px;
     }
 }
@@ -1676,6 +1677,40 @@ body {
 
     &__text {
         margin-top: 10px;
+    }
+}
+
+.not-found {
+    padding: 225px 0 180px;
+    overflow: hidden;
+
+    &__subtitle {
+        font-size: 38px;
+        line-height: 1.55;
+    }
+
+    &__header {
+        position: relative;
+
+        &:before {
+            content: '';
+            width: 636px;
+            height: 636px;
+            border-radius: 50%;
+            border: 2px solid $color-primary;
+            position: absolute;
+            z-index: -1;
+            right: -280px;
+            top: -315px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 110px;
+    }
+
+    &__main-menu {
+        margin-top: 250px;
     }
 }
 
