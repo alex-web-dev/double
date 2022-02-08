@@ -542,7 +542,7 @@
     }
 
     .footer {
-        padding: 40px 0 50px;
+        padding: 60px 0 50px;
     }
 
     .bot-animate {
@@ -728,6 +728,27 @@
             width: 40px;
             height: 40px;
             margin-right: 20px;
+        }
+    }
+
+    .not-found {
+        padding: 60px 0 110px;
+
+        &__header {
+            &:before {
+                width: 384px;
+                height: 384px;
+                right: 180px;
+                top: 235px;
+            }
+        }
+
+        &__subtitle {
+            margin-bottom: 90px;
+        }
+
+        &__main-menu {
+            margin-top: 80px;
         }
     }
 }
